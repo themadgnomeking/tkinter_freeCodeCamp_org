@@ -21,7 +21,7 @@ def button_add():
     global fstNum
     global math
     math = "addition"
-    fstNum = int(firstNumber)
+    fstNum = float(firstNumber)
     e.delete(0, END)
 
 def button_subtract():
@@ -29,7 +29,7 @@ def button_subtract():
     global fstNum
     global math
     math = "subtraction"
-    fstNum = int(firstNumber)
+    fstNum = float(firstNumber)
     e.delete(0, END)
 
 def button_multiply():
@@ -37,7 +37,7 @@ def button_multiply():
     global fstNum
     global math
     math = "multiplication"
-    fstNum = int(firstNumber)
+    fstNum = float(firstNumber)
     e.delete(0, END)
 
 def button_divide():
@@ -45,7 +45,7 @@ def button_divide():
     global fstNum
     global math
     math = "division"
-    fstNum = int(firstNumber)
+    fstNum = float(firstNumber)
     e.delete(0, END)
 
 def button_equal():
@@ -85,23 +85,23 @@ button_add = Button(root, text="+", padx=39, pady=20, command=button_add)
 button_subtract = Button(root, text="-", padx=39, pady=20, command=button_subtract)
 button_multiply = Button(root, text="*", padx=39, pady=20, command=button_multiply)
 button_divide= Button(root, text="/", padx=39, pady=20, command=button_divide)
+button_equal = Button(root, text="=", padx=39, pady=20, command=button_equal)
 
-button_equal = Button(root, text="=", padx=91, pady=20, command=button_equal)
 button_clear = Button(root, text="Clear", padx=79, pady=20, command=button_clear)
-
+button_period = Button(root, text= ".", padx=40, pady=20, command=lambda: button_click("."))
 
 #get the buttons on the screen
-button01.grid(row=3 ,column=2)
-button02.grid(row=3 ,column=1)
-button03.grid(row=3 ,column=0)
+button07.grid(row=1 ,column=2)
+button08.grid(row=1 ,column=1)
+button09.grid(row=1 ,column=0)
 
 button04.grid(row=2 ,column=2)
 button05.grid(row=2 ,column=1)
 button06.grid(row=2 ,column=0)
 
-button07.grid(row=1 ,column=2)
-button08.grid(row=1 ,column=1)
-button09.grid(row=1 ,column=0)
+button01.grid(row=3 ,column=2)
+button02.grid(row=3 ,column=1)
+button03.grid(row=3 ,column=0)
 
 button00.grid(row=4 ,column=0)
 button_clear.grid(row=4, column=1, columnspan=2)
@@ -110,8 +110,9 @@ button_add.grid(row=1, column=3)
 button_subtract.grid(row=2, column=3)
 button_multiply.grid(row=3, column=3)
 button_divide.grid(row=4, column=3)
+button_equal.grid(row=5, column=3)
 
-button_equal.grid(row=5, column=0,columnspan=4)
+button_period.grid(row=5, column=0)
 
 
 root.mainloop()
